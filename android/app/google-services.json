@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "872603472736",
+    "project_id": "audobook-55e97",
+    "storage_bucket": "audobook-55e97.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872603472736:android:dadc9f3ac423f55877c405",
+        "android_client_info": {
+          "package_name": "com.audobook"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj08PITH3zWWtwd8RoAzrG8UCpetOti8Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
