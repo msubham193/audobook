@@ -1,32 +1,26 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
-import Home from '../screens/Home';
-import SpalshScreen from '../screens/SpalshScreen';
-import AuthScreen from '../screens/AuthScreen';
-import {SafeAreaView} from 'react-native';
+import Layout from '../screens/Layout';
+import {StatusBar} from 'react-native';
+import {primary_color} from '../utils/colors';
+import AudioBookDetails from '../screens/AudioBookDetails';
 const Stack = createNativeStackNavigator();
+
 const Navigation = () => {
   return (
     // <SafeAreaView>
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Spalsh">
+      <Stack.Navigator>
         <Stack.Screen
-          name="Spalsh"
+          name="Layout"
           options={{headerShown: false}}
-          component={SpalshScreen}
+          component={Layout}
         />
-
         <Stack.Screen
-          name="Home"
+          name="AudioBookDetails"
           options={{headerShown: false}}
-          component={Home}
-        />
-
-        <Stack.Screen
-          name="Auth"
-          options={{headerShown: false}}
-          component={AuthScreen}
+          component={AudioBookDetails}
         />
       </Stack.Navigator>
     </NavigationContainer>

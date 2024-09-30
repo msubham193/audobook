@@ -1,19 +1,23 @@
 /* eslint-disable react-native/no-inline-styles */
-import {Dimensions, SafeAreaView, StatusBar, Text, View} from 'react-native';
+
 import React from 'react';
 
-
-
-import data from './src/data/data';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 
 import Navigation from './src/navigation/Navigation';
+import BottomTabs from './src/components/BottomTabs';
+import {NavigationContainer} from '@react-navigation/native';
+import {StatusBar} from 'react-native';
+import {primary_color} from './src/utils/colors';
 
 const App = () => {
-  const isCarousel = React.useRef(null);
-  const width = Dimensions.get('window').width;
   return (
     <GestureHandlerRootView style={{flex: 1}}>
+      <StatusBar
+        translucent
+        backgroundColor="transparent"
+        barStyle="light-content"
+      />
       <Navigation />
     </GestureHandlerRootView>
   );

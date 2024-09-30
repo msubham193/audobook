@@ -91,7 +91,7 @@ const AuthScreen = ({navigation}) => {
   }, [cycleImages]);
 
   const handleContinue = () => {
-    sendOtp(phoneNumber);
+    sendOtp(selectedCountries.code + phoneNumber);
     setShowOtp(true);
     Animated.timing(slideAnim, {
       toValue: 1,
@@ -208,11 +208,7 @@ const AuthScreen = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       {/* Make Status Bar transparent */}
-      <StatusBar
-        translucent
-        backgroundColor="transparent"
-        barStyle="light-content"
-      />
+   
 
       {/* Video Section */}
       <View style={styles.videoContainer}>
@@ -346,7 +342,7 @@ const AuthScreen = ({navigation}) => {
           />
           <TouchableOpacity
             style={styles.button}
-            onPress={() => navigation.navigate('Home')}>
+            onPress={() => navigation.navigate('Layout')}>
             <Text style={styles.buttonText}>Verify</Text>
           </TouchableOpacity>
         </Animated.View>
